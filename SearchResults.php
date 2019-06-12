@@ -80,12 +80,11 @@ $connection->connect();
                         $ct++;
                         if(isVisible($row['id'],$_SESSION['type'])):
                             ?>
-                            <ul class="star">
-                                <li id="<?= $row['id'] ?>"><h2> <?= $row['title'] ?></h2>
-                                <li><?= $row['data'] ?>
-                                <li><?= $row['description'] ?>
-                                <li><?= $row['key_words'] ?>
-                                <li><a href="<?= $row['link'] ?>" target="_blank"><?= $row['title'] ?></a></li>
+                            <ul type="none" class="star">
+                                <li id="<?= $row['id'] ?>"><h2><?= $row['title'] ?></h2>
+                                <li><h3>Data: <?= $row['data'] ?></h3>
+                                <li><h4>Descriere: <?= $row['description'] ?></h4>
+                                <li><h5><a href="<?= $row['link'] ?>">Link document</a></h5>
                                 <hr>
                             </ul>
                         <?php
